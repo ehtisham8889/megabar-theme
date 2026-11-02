@@ -311,6 +311,20 @@ header #shop-nav .cart-icon-dropdown > a > i {
     font-size: 1.1rem;
 }
 
+/* Megabar: slim cart pill. The pill padding above came on top of the link's own 24px padding, so the pill
+   was 98px tall and made the top header row 12px taller than on smoke2u.de. Padding now sits on the link only. */
+@media (min-width: 992px) {
+    header #shop-nav .cart-icon-dropdown {
+        padding: 0 !important;
+    }
+    header #shop-nav .cart-icon-dropdown > a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem !important;
+    }
+}
+
 header #shop-nav .cart-icon-dropdown .cart-icon-dropdown-price {
     font-size: 1rem;
     font-weight: 600;
