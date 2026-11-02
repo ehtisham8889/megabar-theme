@@ -324,14 +324,14 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
                 <div class="row no-gutters">
                     <div class="col-6 mb-promo__copy">
                         <div class="mb-kicker" style="color:#ff6b62">Bundle-Aktion</div>
-                        <h2 class="mb-h2">2 Pods kaufen. Akkuträger gratis.</h2>
-                        <p class="mb-lead" style="color:#eee">Zwei Pods aus dem teilnehmenden Sortiment in den Warenkorb legen, der Akkuträger kommt gratis dazu.</p>
+                        <h2 class="mb-h2">Pod inkl. Akku für nur 9,99 €.</h2>
+                        <p class="mb-lead" style="color:#eee">Ein Megabar GT 22000 Pod und der GT Max Akkuträger zusammen im Bundle.</p>
                         <div class="mb-btns mb-0">
-                            <a class="btn btn-light btn-lg" href="{$ShopURL}/Alle-Pods">Pods auswählen</a>
+                            <a class="btn btn-light btn-lg" href="{$ShopURL}/MegaBar-GT-Max-Bundle-Akkutraeger-Pod">Zum Angebot</a>
                         </div>
                     </div>
                     <div class="col-6">
-                        <img src="{$mbHome}/mb-promo-kaufe-2-pods.webp" srcset="{$mbHome}/mb-promo-kaufe-2-pods-500.webp 500w, {$mbHome}/mb-promo-kaufe-2-pods.webp 1000w" sizes="(min-width: 1250px) 825px, 50vw" width="1000" height="1000" loading="lazy" decoding="async" alt="Megabar Aktion: kaufe 2 Megabar Pods und erhalte einen Akku gratis">
+                        <a href="{$ShopURL}/MegaBar-GT-Max-Bundle-Akkutraeger-Pod"><img src="{$mbHome}/mb-promo-pod-inkl-akku.webp" width="800" height="800" loading="lazy" decoding="async" alt="Megabar Pod inklusive GT Max Akku für nur 9,99 €"></a>
                     </div>
                 </div>
             </div>
