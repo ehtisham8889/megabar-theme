@@ -325,10 +325,30 @@ header #shop-nav .cart-icon-dropdown > a > i {
     }
 }
 
-/* Megabar: thin line between the top header row (logo, info, cart) and the menu row, so the menu reads as its own row. */
+/* Megabar: main menu items as small cards, so the menu row reads differently from the top row (logo, info, cart).
+   Hover, active and open dropdown use the brand red; the red underline (::before) is not needed then. */
 @media (min-width: 992px) {
-    #jtl-nav-wrapper .menu-multiple-rows-scroll {
-        border-top: 1px solid #e5e5e5;
+    #mainNavigation .nav-scrollbar-inner {
+        gap: 0.5rem;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    #mainNavigation .nav-scrollbar-item > .nav-link {
+        padding: 0.625rem 1.125rem !important;
+        background: #f5f7fa;
+        border: 1px solid #eaeaea;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+    #mainNavigation .nav-scrollbar-item > .nav-link::before {
+        display: none;
+    }
+    #mainNavigation .nav-scrollbar-item > .nav-link:hover,
+    #mainNavigation .nav-scrollbar-item.active > .nav-link,
+    #mainNavigation .nav-scrollbar-item.show > .nav-link {
+        background: #e0241d;
+        border-color: #e0241d;
+        color: #fff;
     }
 }
 
