@@ -1,0 +1,595 @@
+/*
+ * Platz für eigene Änderungen direkt als CSS
+ * Die hier gemachten Änderungen überschreiben ggfs. andere Styles, da diese Datei als letzte geladen wird.
+ */
+
+ .noticebtn {
+    line-height:100%;
+ }
+
+ 
+/* black friday */
+
+.black-friday-badge {
+    z-index:13;
+    width:100px;
+    top:-10px;
+    left:0;
+    height:100px;
+}
+
+@media (max-width:767px) {
+    .black-friday-badge {
+        width:60px;
+        height:60px;
+    }
+}
+
+.black-friday-badge img {
+    width:100%;
+}
+.black-friday-badge + .ribbon,
+.black-friday-badge + div + .ribbon {
+    display:none;
+}
+
+#product-offer .black-friday-badge {
+    left:1rem;
+}
+
+/* black friday end */
+
+/* hotspot banner additions - interaktives ladenlokal vorbereitungen */
+
+
+#main-wrapper > .kk-wide-layout > .kk-hotspot-banner + * {
+    padding-top:4rem;
+ }
+ #main-wrapper > .kk-wide-layout > .kk-hotspot-banner,
+ #main-wrapper > .kk-wide-layout > .kk-hotspot-banner > .kk-hotspot-banner-inner,
+ #main-wrapper > .kk-wide-layout > .kk-hotspot-banner > .kk-hotspot-banner-inner > img {
+    width:100%;
+    max-width: none;
+ }
+
+ @media (max-width:992px) {
+    #main-wrapper > .kk-wide-layout > .kk-hotspot-banner {
+        overflow-x:scroll;
+    }
+    #main-wrapper > .kk-wide-layout > .kk-hotspot-banner > .kk-hotspot-banner-inner,
+    #main-wrapper > .kk-wide-layout > .kk-hotspot-banner {
+    height:calc(100vh - 79px);
+    min-height:calc(100vh - 79px);
+ }
+ #main-wrapper > .kk-wide-layout > .kk-hotspot-banner > .kk-hotspot-banner-inner > img {
+    min-height:100%;
+    height:100%;
+    width:auto;
+ }
+ #main-wrapper > .kk-wide-layout > .kk-hotspot-banner > .kk-hotspot-banner-inner {
+    width:auto!important;
+ }
+}
+
+#main-wrapper .kk-hotspot-info {
+    opacity:1.0;
+    visibility:visible;
+    scale:0;
+    transform-origin: center center;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+    border-radius:2rem;
+    z-index:2;
+    margin-top:2rem!important;
+}
+@media (max-width:992px) {
+  #main-wrapper .kk-hotspot-info {
+    
+  }
+}
+#main-wrapper .kk-hotspot-info:before {
+    content:"";
+    background:#fff;
+    width:1px;
+    height:0;
+    left:50%;
+    top:0;
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
+    position:Absolute;
+}
+#main-wrapper .kk-hotspot-info .kk-hotspot-description,
+#main-wrapper .kk-hotspot-info .kk-hotspot-action,
+#main-wrapper .kk-hotspot-info .kk-hotspot-image {
+    display:none;
+}
+@media (max-width:992px) {
+    #main-wrapper .kk-hotspot-info,
+    #main-wrapper .kk-hotspot-banner .kk-hotspot-marker--dot + .kk-hotspot-info  {
+        scale:1;
+        margin:0!important;
+        left:-50%;
+        top:1rem;
+        width:auto;
+    }
+    #main-wrapper .kk-hotspot-info {
+        padding:.25rem;
+    }
+    #main-wrapper .kk-hotspot-info:before {
+        top:-1rem;
+        margin-left:-1px;
+        width:1px;
+        height:1rem;
+    }
+  }
+#main-wrapper .kk-hotspot-info:hover,
+#main-wrapper .kk-hotspot-banner .kk-hotspot-marker--dot:hover + .kk-hotspot-info  {
+    scale:1;
+}
+#main-wrapper .kk-hotspot-info:hover:before,
+#main-wrapper .kk-hotspot-banner .kk-hotspot-marker--dot:hover + .kk-hotspot-info:before {
+    height:2rem;
+    top:-2rem;
+}
+
+#main-wrapper .kk-hotspot-banner .kk-hotspot-info .kk-hotspot-link {
+    height:calc(100% + 2rem);
+    top:-2rem;
+}
+#main-wrapper .kk-hotspot-banner .kk-hotspot-info {
+    pointer-events: all!important;
+}
+#main-wrapper .kk-hotspot-banner .kk-hotspot-marker--dot {
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    background:transparent;
+    border-width: 0px;
+}
+
+#main-wrapper .kk-hotspot-banner .kk-hotspot-marker--dot:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 300%;
+    height: 300%;
+    box-sizing: border-box;
+    margin-left: -100%;
+    margin-top: -100%;
+    border-radius: 45px;
+    background-color: white;
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+#main-wrapper .kk-hotspot-banner .kk-hotspot-marker--dot:after {
+    content: '';
+    position: absolute;
+    left: 0; 
+    border-width:0px;
+    top: 0;
+    margin:0!important;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+    animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+}
+
+@media (max-width:992px) {
+
+    #main-wrapper .kk-hotspot {
+        
+    }
+
+    #main-wrapper .kk-hotspot:hover .kk-hotspot-info,
+    #main-wrapper .kk-hotspot .kk-hotspot-info{
+        opacity:0
+    }
+    #main-wrapper .kk-hotspot.kk-hotspot-custom:hover .kk-hotspot-link,
+    #main-wrapper .kk-hotspot.kk-hotspot-custom .kk-hotspot-link,
+    #main-wrapper .kk-hotspot:hover .kk-hotspot-link,
+    #main-wrapper .kk-hotspot .kk-hotspot-link{
+        pointer-events:none!important;
+    }
+
+    #main-wrapper .kk-hotspot.marker-active:hover .kk-hotspot-info,
+    #main-wrapper .kk-hotspot.marker-active .kk-hotspot-info{
+        opacity:1;
+    }
+    #main-wrapper .kk-hotspot.kk-hotspot-custom.marker-active:hover .kk-hotspot-link,
+    #main-wrapper .kk-hotspot.kk-hotspot-custom.marker-active .kk-hotspot-link,
+    #main-wrapper .kk-hotspot.marker-active:hover .kk-hotspot-link,
+    #main-wrapper .kk-hotspot.marker-active .kk-hotspot-link{
+        pointer-events:all!important;
+    }
+    
+    #main-wrapper .kk-hotspot-info,
+    #main-wrapper .kk-hotspot-banner .kk-hotspot-marker--dot + .kk-hotspot-info  {
+        scale:1;
+        margin:0!important;
+        left:-50%;
+        top:1rem;
+        width:auto;
+    }
+    #main-wrapper .kk-hotspot-info {
+        padding:.25rem;
+    }
+    #main-wrapper .kk-hotspot-info:before {
+        top:-1rem;
+        margin-left:-1px;
+        width:1px;
+        height:1rem;
+    }
+    #main-wrapper .kk-hotspot.marker-active:hover .kk-hotspot-info:before,
+    #main-wrapper .kk-hotspot-banner .kk-hotspot.marker-active:hover + .kk-hotspot-info:before,
+    #main-wrapper .kk-hotspot.marker-active .kk-hotspot-info:before,
+    #main-wrapper .kk-hotspot-banner .kk-hotspot.marker-active + .kk-hotspot-info:before {
+        height:1rem;
+        top:-1rem;
+    }
+    #main-wrapper .kk-hotspot.kk-hotspot-custom .kk-hotspot-info {
+        top:auto!important;
+        bottom:4rem;
+    }
+    #main-wrapper .kk-hotspot.marker-active.kk-hotspot-custom .kk-hotspot-info:before {
+        height:3rem;
+        bottom:-2.5rem;
+        top:auto!important;
+    }
+    #main-wrapper .kk-hotspot-banner .kk-hotspot-info .kk-hotspot-link {
+        top:0;
+    }
+    
+}
+  
+  
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(.33);
+    }
+    80%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse-dot {
+    0% {
+      transform: scale(.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(.8);
+    }
+  }
+
+/* hotspot banner ende */
+
+/* Anpassung Darstellung Gratisgeschenk wg xvolution Plugin */
+
+.basket .basket-items .cart-items-body.type-11 .cart-items-name::before {
+	display: block;
+}
+
+/* minimale drop anpassungen */
+
+.sale-area > .grid-system > .grid-system-row > .grid-space.sale-banner-right .grid-space._dg-max-4 h5 {
+    align-content:end;
+}
+
+
+
+header #shop-nav .cart-icon-dropdown:before,
+header #shop-nav .cart-icon-dropdown.show:before {
+    content: none !important;
+}
+
+header #shop-nav .cart-icon-dropdown {
+    background: #e0231d;
+    border-radius: 2rem;
+    padding: 0.75rem 1.25rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: center;
+}
+
+header #shop-nav .cart-icon-dropdown > a,
+header #shop-nav .cart-icon-dropdown > a > i {
+    color: #fff !important;
+    font-size: 1.1rem;
+}
+
+header #shop-nav .cart-icon-dropdown .cart-icon-dropdown-price {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#shop-nav {
+    align-items: center !important;
+}
+
+
+/* Logo left-aligned */
+.header-logo-bar {
+    justify-content: flex-start !important;
+}
+
+.logo-wrapper.text-center {
+    text-align: left !important;
+}
+
+#image_wrapper #gallery .square {
+  position: relative !important;
+  aspect-ratio: 1 / 1;
+  height: auto !important;
+}
+#image_wrapper #gallery .square::before { display: none !important; }
+#image_wrapper #gallery .square .inner {
+  position: absolute !important; top: 0; right: 0; bottom: 0; left: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+#image_wrapper #gallery .square .inner picture,
+#image_wrapper #gallery .square .inner img { max-width: 100%; max-height: 100%; }
+
+/* Variation dropdown over description fix */
+#product-offer {
+    position: relative;
+    z-index: 30;
+}
+
+#product-offer .dropdown-menu,
+#product-offer .bootstrap-select .dropdown-menu {
+    z-index: 1050 !important;
+    background: #fff;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+/* Megabar search: icon only, opens native search */
+.search-form-wrapper-fixed { display: none !important; }
+#doofindericon { cursor: pointer; }
+.main-search-wrapper { position: relative; }
+
+#mb-search-box {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 420px;
+    max-width: 90vw;
+    z-index: 1050;
+    background: #fff;
+    padding: 12px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15);
+}
+body.mb-search-open #mb-search-box { display: block; }
+
+@media (max-width: 991.98px) {
+    .main-search-wrapper { position: static !important; }
+    #mb-search-box {
+        top: 100%;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #mb-search-box form,
+    #mb-search-box .input-group {
+        display: flex !important;
+        width: 100% !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    #mb-search-box input[name=qs] {
+        display: block !important;
+        flex: 1 1 auto;
+        width: 100% !important;
+        min-width: 0;
+        height: 44px;
+        padding: 0 1rem;
+        color: #000 !important;
+        background: #fff !important;
+        border: 1px solid #000 !important;
+        border-radius: 2rem 0 0 2rem;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    #mb-search-box button {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+/* Megabar search end */
+
+
+/* Variation dropdown fix end */
+
+@media (max-width: 767.98px) {
+  .newfooterdark { padding-bottom: 4.5rem; }
+  .newfooterdark #system-credits { text-align: left; padding: .5rem 0 0; }
+}
+
+/* Megabar Speed: font-display swap for icon fonts.
+   Same family/weight/style as the rules in smoke2u.css and the inline
+   critical CSS (which use font-display: block). The later rule wins,
+   URLs are identical, so no font is downloaded twice. */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../../NOVA/themes/base/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"), url("../../../NOVA/themes/base/fontawesome/webfonts/fa-brands-400.woff") format("woff");
+}
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../../NOVA/themes/base/fontawesome/webfonts/fa-regular-400.woff2") format("woff2"), url("../../../NOVA/themes/base/fontawesome/webfonts/fa-regular-400.woff") format("woff");
+}
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../../NOVA/themes/base/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("../../../NOVA/themes/base/fontawesome/webfonts/fa-solid-900.woff") format("woff");
+}
+@font-face {
+  font-family: "smoke2uicon";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/templates/Megabar/themes/smoke2u/fonts/smoke2uicon.ttf?42ejjx") format("truetype"), url("/templates/Megabar/themes/smoke2u/fonts/smoke2uicon.woff?42ejjx") format("woff");
+}
+@font-face {
+  font-family: "smokeicons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/templates/Megabar/themes/smoke2u/fonts/smokeicons.ttf?431fpr") format("truetype"), url("/templates/Megabar/themes/smoke2u/fonts/smokeicons.woff?431fpr") format("woff");
+}
+
+/* Megabar Speed: service icons have width/height attributes now (no layout
+   shift before CSS loads); keep them shrinking with their 20px box as before. */
+.product_services_area .ps-icon img { max-width: 100%; height: auto; }
+
+/* Megabar Speed: the only Animate.css 3.5.2 (MIT, Daniel Eden) rules the theme uses:
+   WOW adds "animated", category pages use "wow fadeIn", the add-to-cart popup "wow bounceInDown".
+   The rest of Animate.css was removed from compiled smoke2u.css. */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+@keyframes bounceInDown {
+  0%, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+.bounceInDown {
+  animation-name: bounceInDown;
+}
+
+/* Megabar: quantity pill (product page + product tiles). The red outline was the border of the
+   input group, painted UNDER its children; the white quantity input sits right on the bottom border
+   line, so a 1px paint/raster offset while the page loads made the bottom border vanish under the
+   input for a few seconds. The outline is now drawn by ::after ON TOP of the children (same size,
+   colour and radius; the real border stays as transparent spacer), so nothing can cover it.
+   Selectors = the red pill rules in smoke2u.css. */
+#add-to-cart #quantity-grp,
+.slick-smooth-loading .item-box-qty .form-counter,
+.slick-slide .item-box-qty .form-counter,
+.kk-slider-item .item-box-qty .form-counter,
+div#product-list .item-box-qty .form-counter {
+  position: relative;
+  border-color: transparent !important;
+}
+#add-to-cart #quantity-grp::after,
+.slick-smooth-loading .item-box-qty .form-counter::after,
+.slick-slide .item-box-qty .form-counter::after,
+.kk-slider-item .item-box-qty .form-counter::after,
+div#product-list .item-box-qty .form-counter::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: -1px;
+  left: -1px;
+  border: 1px solid #e0231d;
+  border-right: 0;
+  border-radius: 2rem 0 0 2rem;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Megabar: the red category filter box bled 1.3rem past the right edge on desktop (5px horizontal
+   scrollbar at 1366px, smoke2u.de has the same). Keep the left bleed, align the right edge with the grid. */
+@media (min-width: 992px) {
+  .filter-cat { margin-right: 0; }
+}
+
+/* Megabar: the cookie consent banner was set to "Proxima Nova" (smoke2u.css #consent-manager), a font the
+   theme never loads, so it showed in a system fallback font. Use the shop font like everywhere else. */
+#consent-manager {
+  font-family: "Rubik", sans-serif;
+}
+
+/* Megabar: contrast (Lighthouse/WCAG AA needs 4.5:1). The off-white #f5f7fa text on the brand red #e0231d
+   gave 4.41:1 on buttons and badges, pure white gives 4.75:1. Background stays the brand red.
+   Disabled buttons (grey background, black text) are left alone. */
+.btn-primary:not(:disabled):not(.disabled),
+.btn-primary:not(:disabled):not(.disabled):hover,
+.btn-primary:not(:disabled):not(.disabled):focus,
+.btn-primary:not(:disabled):not(.disabled).focus,
+.badge-primary,
+a.badge-primary:hover,
+a.badge-primary:focus {
+  color: #fff;
+}
+
+/* Megabar: the old price on product tiles is black at 50% opacity (smoke2u.css .productbox-inner .old-price),
+   which reads as #808080 = 3.94:1 on white. 60% gives #666 = 5.7:1 and still looks muted. */
+.productbox-inner .old-price {
+  opacity: 0.6;
+}
+
+/* Megabar: the WEEE bin icon (goe_elektroG plugin) has no width/height. Its box sizes itself from the image,
+   so until the SVG arrives it is 0 wide and the page shifts when it loads. Use the width it ends up with anyway
+   (75px, the max-width in smoke2u.css) and the SVG's own ratio (420 x 597). Same look, space reserved early. */
+.dangersym_smoke2u img[src*="WEEE_symbol"] {
+  width: 75px !important;
+  aspect-ratio: auto 420 / 597;
+}
+
+/* Megabar: product tiles never show the variation selects. smoke2u.js (cleanVarBoxes) removes them on page load,
+   but not after the list is reloaded by AJAX (paging, filters). Then a variant product (e.g. GT Max Bundle) shows
+   Farbe/Sorte selects on hover and the WEEE bin and danger skull sit on top of them. Keep them hidden in lists. */
+.product-list .productbox-show-variations .productbox-variations {
+  display: none !important;
+}

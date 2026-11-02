@@ -1,0 +1,65 @@
+//
+// Platz für eigene Variablen in SCSS-Notation
+//
+// Alle Änderungen hier müssen anschließend mit einem SCSS-Compiler
+// (z.B. dem JTL-Theme-Editor Plugin) nach my-nova.css kompiliert werden
+// --------------------------------------------------
+
+// colors
+$primary:       #e0231d ; // 
+
+$black:         #000000;
+$gray:          $black;
+$gray-dark:     $black;
+$gray-darker:   $black;
+$footer-color:  $black;
+$light-gray:    #252525;
+$gray-light:    #eaeaea;
+
+// fonts
+
+$font-family-sans-serif:            'Rubik', sans-serif;
+$font-accent:                       'Rubik', sans-serif;
+
+$font-size-base:                    rem(14px);
+$font-size-lg:                      rem(16px);
+$font-size-sm:                      rem(12px);
+$font-size-xs:                      rem(11px);
+
+$font-weight-lighter		: 400;
+$font-weight-light			: 400;
+$font-weight-normal			: 400;
+$font-weight-semibold		: 500;
+$font-weight-bold			: 600;
+$font-weight-bolder			: 700;
+$font-weight-boldest		: 800;
+$font-weight-black  		: 900;
+
+// heading
+
+$h1-font-size:                      rem(30px);
+$h2-font-size:                      rem(24px);
+$h3-font-size:                      rem(16px) ;
+$h4-font-size:                      $font-size-base;
+$h5-font-size:                      $font-size-base;
+$h6-font-size:                      $font-size-base;
+
+$headings-font-family:              $font-accent;
+$headings-font-weight:              $font-weight-bold;
+$headings-color:                    $black;
+
+// inputs
+
+$border-radius:                 2rem;
+$border-radius-dropdown:        1rem;
+
+// -------------------Ende eigene Variablen----------------------------------
+
+// Lädt Theme-Variablen, hier aus dem "clear"
+// @import '../../../../NOVA/themes/blackline/sass/variables';
+@import '../../../../NOVA/themes/clear/sass/variables';
+// @import '../../../../NOVA/themes/midnight/sass/variables';
+
+// passt die Pfade an
+$nova-theme-path:                   "../../../NOVA/themes";
+$fa-font-path:                      "../../../NOVA/themes/base/fontawesome/webfonts";
