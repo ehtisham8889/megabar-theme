@@ -53,8 +53,8 @@
     ['Welche Nikotinstärke haben die Pods?', 'Die Megabar Pods in unserem Shop enthalten 20 mg/ml Nikotin.'],
     ['Wie schnell wird geliefert?', 'Die Lieferung erfolgt innerhalb von 1 bis 3 Werktagen mit DHL 18+. Ab 49 € ist der Versand innerhalb Deutschlands kostenlos.']
 ]}
-{* Test: mit ?mbboxed=1 in der URL stehen Banner und Kacheln in der Container-Breite, alle Abschnitte so breit wie der Header *}
-{$mbBoxed = isset($smarty.get.mbboxed)}
+{* Banner und Kacheln in der Container-Breite, alle Abschnitte so breit wie der Header. Alte volle Breite zum Vergleich: ?mbboxed=0 *}
+{$mbBoxed = !isset($smarty.get.mbboxed) || $smarty.get.mbboxed !== '0'}
 
 <div class="mb-home{if $mbBoxed} mb-home--boxed{/if}">
 {literal}<style>
