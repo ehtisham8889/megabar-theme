@@ -21,7 +21,7 @@
 {* Startseiten-Banner oben: 1 = ein Bild ueber die volle Breite, 0 = bisheriger dunkler Hero (Rollback).
    Link leer lassen = Banner nicht klickbar. *}
 {$mbBannerOn  = 1}
-{$mbBannerUrl = "{$ShopURL}/GT-22000"}
+{$mbBannerUrl = "{$ShopURL}/MegaBar-GT-Max-Bundle-Akkutraeger-Pod"}
 {$mbBannerAlt = 'Megabar GT 22000 Akkuträger und Pods: Pod inklusive Akku jetzt für nur 9,99 €'}
 {* Kacheln unter dem Banner (je 600x417). url leer = Kachel nicht klickbar (z. B. solange es die Kategorie noch nicht gibt). *}
 {$mbTiles = [
