@@ -325,6 +325,13 @@ header #shop-nav .cart-icon-dropdown > a > i {
     }
 }
 
+/* Megabar: thin line between the top header row (logo, info, cart) and the menu row, so the menu reads as its own row. */
+@media (min-width: 992px) {
+    #jtl-nav-wrapper .menu-multiple-rows-scroll {
+        border-top: 1px solid #e5e5e5;
+    }
+}
+
 header #shop-nav .cart-icon-dropdown .cart-icon-dropdown-price {
     font-size: 1rem;
     font-weight: 600;
