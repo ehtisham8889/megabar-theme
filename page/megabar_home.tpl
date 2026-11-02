@@ -13,7 +13,6 @@
 {$mbCatGTMax     = 2331}{* GT Max 15000 *}
 {$mbCatGTMaxPods = 2337}{* GT Max 15000 > Pods *}
 {$mbCatGTMaxAkku = 2338}{* GT Max 15000 > Akkutraeger *}
-{$mbCatSlimSets  = 2342}{* Slim 12K > Starter-Sets *}
 {$mbCatAllSets   = 2348}{* Alle Starter-Sets *}
 {$mbGfx = "{$ShopURL}/templates/Megabar/themes/smoke2u/gfx"}
 {$mbOpc = "{$ShopURL}/media/image/storage/opc"}
@@ -37,7 +36,6 @@
 {get_product_list kKategorie=$mbCatGT22Akku  nLimit=1 nSortierung=$smarty.const.SEARCH_SORT_PRICE_ASC cAssign='mbMinGT22Akku'}
 {get_product_list kKategorie=$mbCatGTMaxPods nLimit=1 nSortierung=$smarty.const.SEARCH_SORT_PRICE_ASC cAssign='mbMinGTMaxPod'}
 {get_product_list kKategorie=$mbCatGTMaxAkku nLimit=1 nSortierung=$smarty.const.SEARCH_SORT_PRICE_ASC cAssign='mbMinGTMaxAkku'}
-{get_product_list kKategorie=$mbCatSlimSets  nLimit=1 nSortierung=$smarty.const.SEARCH_SORT_PRICE_ASC cAssign='mbMinSlimSet'}
 {get_product_list kKategorie=$mbCatAllSets   nLimit=1 nSortierung=$smarty.const.SEARCH_SORT_PRICE_ASC cAssign='mbMinSet'}
 {* Sorten-Raster: die 12 beliebtesten GT 22000 Pods. 12 statt aller Sorten haelt die Seite so schnell wie die bisherige
    Startseite (getestet: 23 Kacheln = +0,15 s auf dem Handy, 12 Kacheln = gleich schnell). *}
@@ -45,14 +43,13 @@
 
 {$mbSeries = [
     ['name'=>'GT 22000',     'url'=>"{$ShopURL}/GT-22000",     'tag'=>'Meiste Sorten', 'img'=>"{$mbOpc}/megabar-gt-22000-akkutraeger-black.webp", 'alt'=>'Megabar GT 22000 Akkuträger in Schwarz', 'puffs'=>'bis 22.000', 'bat'=>'1400 mAh', 'pod'=>'10 ml', 'p1l'=>'Pods ab', 'p1'=>$mbMinGT22Pod,  'p2l'=>'Akkuträger ab', 'p2'=>$mbMinGT22Akku],
-    ['name'=>'GT Max 15000', 'url'=>"{$ShopURL}/GT-Max-15000", 'tag'=>'Alu-Gehäuse',   'img'=>"{$mbHome}/mb-card-gtmax.webp",                'alt'=>'Megabar GT Max Akkuträger in Silver Gray','puffs'=>'bis 15.000', 'bat'=>'1400 mAh', 'pod'=>'10 ml', 'p1l'=>'Pods ab', 'p1'=>$mbMinGTMaxPod, 'p2l'=>'Akkuträger ab', 'p2'=>$mbMinGTMaxAkku],
-    ['name'=>'Slim 12K',     'url'=>"{$ShopURL}/Slim-12K",     'tag'=>'Kompakt',       'img'=>"{$mbOpc}/megabar-slim-starter-kit-watermelon.webp", 'alt'=>'Megabar Slim 12K Starter Kit',         'puffs'=>'bis 12.000', 'bat'=>'600 mAh',  'pod'=>'6 ml',  'p1l'=>'Starter-Set ab', 'p1'=>$mbMinSlimSet, 'p2l'=>'', 'p2'=>[]]
+    ['name'=>'GT Max 15000', 'url'=>"{$ShopURL}/GT-Max-15000", 'tag'=>'Alu-Gehäuse',   'img'=>"{$mbHome}/mb-card-gtmax.webp",                'alt'=>'Megabar GT Max Akkuträger in Silver Gray','puffs'=>'bis 15.000', 'bat'=>'1400 mAh', 'pod'=>'10 ml', 'p1l'=>'Pods ab', 'p1'=>$mbMinGTMaxPod, 'p2l'=>'Akkuträger ab', 'p2'=>$mbMinGTMaxAkku]
 ]}
 
 {$mbFaq = [
-    ['Wie viele Züge hat ein Megabar Pod?', 'Je nach Serie bis zu 22.000 (GT 22000), 15.000 (GT Max) oder 12.000 (Slim 12K). Die tatsächliche Zahl hängt vom Zugverhalten ab.'],
-    ['Sind die Pods nachfüllbar?', 'Nein. GT 22000 und GT Max Pods sind mit 10 ml vorbefüllt, Slim 12K Pods mit 6 ml. Leere Pods tauschst du einfach gegen neue aus.'],
-    ['Passen GT 22000 Pods in den GT Max?', 'Ja. GT 22000 und GT Max Pods passen in alle GT-Akkuträger (GT 22000, GT Max und GT 15000). Nur die Slim 12K hat eigene Pods, siehe Übersicht oben.'],
+    ['Wie viele Züge hat ein Megabar Pod?', 'Je nach Serie bis zu 22.000 (GT 22000) oder 15.000 (GT Max). Die tatsächliche Zahl hängt vom Zugverhalten ab.'],
+    ['Sind die Pods nachfüllbar?', 'Nein. GT 22000 und GT Max Pods sind mit 10 ml vorbefüllt. Leere Pods tauschst du einfach gegen neue aus.'],
+    ['Passen GT 22000 Pods in den GT Max?', 'Ja. GT 22000 und GT Max Pods passen in alle GT-Akkuträger (GT 22000, GT Max und GT 15000).'],
     ['Welche Nikotinstärke haben die Pods?', 'Die Megabar Pods in unserem Shop enthalten 20 mg/ml Nikotin.'],
     ['Wie schnell wird geliefert?', 'Die Lieferung erfolgt innerhalb von 1 bis 3 Werktagen mit DHL 18+. Ab 49 € ist der Versand innerhalb Deutschlands kostenlos.']
 ]}
@@ -289,9 +286,9 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
             <div class="mb-head">
                 <div>
                     <div class="mb-kicker">01 · Finde dein System</div>
-                    <h2 class="mb-h2">Drei Serien. Ein Prinzip.</h2>
+                    <h2 class="mb-h2">Zwei Serien. Ein Prinzip.</h2>
                 </div>
-                <p class="mb-lead">GT 22000 und GT Max Pods passen in alle GT-Akkuträger, die Slim 12K hat eigene Pods. Wähle zuerst das Gerät, die passenden Sorten findest du danach auf der Serienseite.</p>
+                <p class="mb-lead">GT 22000 und GT Max Pods passen in alle GT-Akkuträger. Wähle zuerst das Gerät, die passenden Sorten findest du danach auf der Serienseite.</p>
             </div>
             {* Serien ohne Artikel im Shop (kein "ab"-Preis gefunden) werden ausgeblendet und erscheinen automatisch wieder *}
             {$mbCardCount = 0}{foreach $mbSeries as $s}{if !empty($s.p1)}{$mbCardCount = $mbCardCount + 1}{/if}{/foreach}
@@ -378,16 +375,15 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
                 <div class="col-12 col-lg-4 mb-3 mb-lg-0">
                     <div class="mb-kicker">03 · Kompatibilität</div>
                     <h2 class="mb-h2">Welcher Pod passt in welchen Akkuträger?</h2>
-                    <p class="mb-lead">GT 22000 und GT Max Pods sind untereinander kompatibel. Slim 12K Pods passen nur in die Slim 12K. Im Zweifel hilft der WhatsApp Support.</p>
+                    <p class="mb-lead">GT 22000 und GT Max Pods sind untereinander kompatibel. Im Zweifel hilft der WhatsApp Support.</p>
                 </div>
                 <div class="col-12 col-lg-8">
                     <div class="mb-table">
                         <table>
-                            <thead><tr><th scope="col">Pod</th><th scope="col">GT 22000</th><th scope="col">GT Max / GT 15000</th><th scope="col">Slim 12K</th></tr></thead>
+                            <thead><tr><th scope="col">Pod</th><th scope="col">GT 22000</th><th scope="col">GT Max / GT 15000</th></tr></thead>
                             <tbody>
-                                <tr><th scope="row">GT 22000 Pod</th><td class="y">&#10003;<span class="mb-pass"> passt</span></td><td class="y">&#10003;<span class="mb-pass"> passt</span></td><td class="n">&ndash;</td></tr>
-                                <tr><th scope="row">GT Max Pod</th><td class="y">&#10003;<span class="mb-pass"> passt</span></td><td class="y">&#10003;<span class="mb-pass"> passt</span></td><td class="n">&ndash;</td></tr>
-                                <tr><th scope="row">Slim 12K Pod + Coil</th><td class="n">&ndash;</td><td class="n">&ndash;</td><td class="y">&#10003;<span class="mb-pass"> passt</span></td></tr>
+                                <tr><th scope="row">GT 22000 Pod</th><td class="y">&#10003;<span class="mb-pass"> passt</span></td><td class="y">&#10003;<span class="mb-pass"> passt</span></td></tr>
+                                <tr><th scope="row">GT Max Pod</th><td class="y">&#10003;<span class="mb-pass"> passt</span></td><td class="y">&#10003;<span class="mb-pass"> passt</span></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -402,7 +398,7 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
             <div class="mb-kicker">04 · So funktioniert's</div>
             <h2 class="mb-h2">Mehrweg statt Einweg.</h2>
             <ol class="mb-steps">
-                <li><span>1</span><h3>Akkuträger wählen</h3><p>GT 22000, GT Max oder Slim 12K. Einmal kaufen, per USB-C laden und immer wieder nutzen.</p></li>
+                <li><span>1</span><h3>Akkuträger wählen</h3><p>GT 22000 oder GT Max. Einmal kaufen, per USB-C laden und immer wieder nutzen.</p></li>
                 <li><span>2</span><h3>Pod einsetzen</h3><p>Vorbefüllt und sofort startklar. Kein Nachfüllen nötig.</p></li>
                 <li><span>3</span><h3>Sorte wechseln</h3><p>Leeren Pod abziehen und den nächsten einsetzen. Der Akkuträger bleibt.</p></li>
             </ol>
@@ -435,7 +431,7 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
             <h2 class="mb-h2">Megabar Pods und Akkuträger im offiziellen Shop</h2>
             <div class="mb-seo">
                 <p>Megabar ist ein wiederaufladbares Pod-System: Ein Akkuträger wird mit vorbefüllten Wechselpods kombiniert. Statt nach jedem Liquid ein ganzes Gerät zu entsorgen, wird nur der Pod getauscht.</p>
-                <p>Der GT 22000 ist auf bis zu 22.000 Züge ausgelegt und bietet die größte Sortenauswahl. Der GT Max 15000 kommt mit 1400-mAh-Akku und einstellbarer Airflow, die Slim 12K ist die kompakte Variante mit 600-mAh-Akku und 6-ml-Pods.</p>
+                <p>Der GT 22000 ist auf bis zu 22.000 Züge ausgelegt und bietet die größte Sortenauswahl. Der GT Max 15000 kommt mit 1400-mAh-Akku und einstellbarer Airflow.</p>
             </div>
         </div>
     </section>
