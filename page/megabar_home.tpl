@@ -322,7 +322,7 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
         <div class="container">
             <div class="mb-promo">
                 <div class="row no-gutters">
-                    <div class="col-7 mb-promo__copy">
+                    <div class="col-6 mb-promo__copy">
                         <div class="mb-kicker" style="color:#ff6b62">Bundle-Aktion</div>
                         <h2 class="mb-h2">2 Pods kaufen. Akkuträger gratis.</h2>
                         <p class="mb-lead" style="color:#eee">Zwei Pods aus dem teilnehmenden Sortiment in den Warenkorb legen, der Akkuträger kommt gratis dazu.</p>
@@ -330,8 +330,8 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
                             <a class="btn btn-light btn-lg" href="{$ShopURL}/Alle-Pods">Pods auswählen</a>
                         </div>
                     </div>
-                    <div class="col-5">
-                        <img src="{$mbHome}/mb-promo-kaufe-2-pods.webp" srcset="{$mbHome}/mb-promo-kaufe-2-pods-500.webp 500w, {$mbHome}/mb-promo-kaufe-2-pods.webp 1000w" sizes="(min-width: 1250px) 510px, 42vw" width="1000" height="1000" loading="lazy" decoding="async" alt="Megabar Aktion: kaufe 2 Megabar Pods und erhalte einen Akku gratis">
+                    <div class="col-6">
+                        <img src="{$mbHome}/mb-promo-kaufe-2-pods.webp" srcset="{$mbHome}/mb-promo-kaufe-2-pods-500.webp 500w, {$mbHome}/mb-promo-kaufe-2-pods.webp 1000w" sizes="(min-width: 1250px) 825px, 50vw" width="1000" height="1000" loading="lazy" decoding="async" alt="Megabar Aktion: kaufe 2 Megabar Pods und erhalte einen Akku gratis">
                     </div>
                 </div>
             </div>
