@@ -22,7 +22,7 @@
    Link leer lassen = Banner nicht klickbar. *}
 {$mbBannerOn  = 1}
 {$mbBannerUrl = "{$ShopURL}/MegaBar-GT-Max-Bundle-Akkutraeger-Pod"}
-{$mbBannerAlt = 'Megabar GT 22000 Akkuträger und Pods: Pod inklusive Akku jetzt für nur 9,99 €'}
+{$mbBannerAlt = 'Megabar GT Max Bundle: Akkuträger inklusive Pod jetzt für nur 9,99 €'}
 {* Kacheln unter dem Banner (je 600x417). url leer = Kachel nicht klickbar (z. B. solange es die Kategorie noch nicht gibt). *}
 {$mbTiles = [
     ['img'=>'mb-tile-gt22000-20mg.webp',         'url'=>"{$ShopURL}/Pods",          'alt'=>'Megabar GT22000 Pods mit 20 mg Nikotin, 22 Sorten'],
