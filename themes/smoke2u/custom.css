@@ -547,6 +547,22 @@ div#product-list .item-box-qty .form-counter::after {
   pointer-events: none;
   z-index: 5;
 }
+/* Megabar: the quantity number and -/+ sat on a white box, which stood out against the light grey
+   page (#f5f7fa) behind the product tiles. Let the page colour show through; the red outline above stays. */
+.slick-smooth-loading .item-box-qty .form-counter,
+.slick-slide .item-box-qty .form-counter,
+.kk-slider-item .item-box-qty .form-counter,
+div#product-list .item-box-qty .form-counter,
+.slick-smooth-loading .item-box-qty .form-counter .form-control,
+.slick-slide .item-box-qty .form-counter .form-control,
+.kk-slider-item .item-box-qty .form-counter .form-control,
+div#product-list .item-box-qty .form-counter .form-control,
+.slick-smooth-loading .item-box-qty .form-counter .btn,
+.slick-slide .item-box-qty .form-counter .btn,
+.kk-slider-item .item-box-qty .form-counter .btn,
+div#product-list .item-box-qty .form-counter .btn {
+  background-color: transparent !important;
+}
 
 /* Megabar: the red category filter box bled 1.3rem past the right edge on desktop (5px horizontal
    scrollbar at 1366px, smoke2u.de has the same). Keep the left bleed, align the right edge with the grid. */
