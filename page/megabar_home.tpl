@@ -106,6 +106,12 @@
 .mb-specs dd{margin:0;font-weight:600}
 .mb-specs .mb-price{color:var(--mb-red)}
 .mb-card__cta{margin-top:auto;font-weight:600;color:var(--mb-red)}
+/* Test ?mbboxed=1: Systeme kompakter, Text links, Serien-Karten rechts */
+@media (min-width:992px){
+.mb-home--boxed #mb-systeme .container{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:3rem;align-items:center}
+.mb-home--boxed #mb-systeme .mb-head{flex-direction:column;align-items:flex-start;margin-bottom:0}
+.mb-home--boxed #mb-systeme .mb-cards--2 .mb-card__img img{max-width:240px}
+}
 .mb-promo{border-radius:.75rem;overflow:hidden;background:linear-gradient(110deg,#090909,#9c1914);color:#fff}
 .mb-promo .row{align-items:center}
 .mb-promo .row>.mb-promo__copy{padding:2rem 1.5rem}
