@@ -150,12 +150,20 @@
 .mb-tile{display:block;border-radius:.75rem;overflow:hidden;box-shadow:0 .25rem 1rem rgba(0,0,0,.08);transition:box-shadow .2s,transform .2s}
 a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2px)}
 .mb-tile img{display:block;width:100%;height:auto}
+/* Test ?mbboxed=1: Banner + Kacheln in derselben Container-Breite wie die Abschnitte darunter */
+.mb-boxed{background:#fff;padding-top:.625rem}
+.mb-boxed .mb-banner{background:none}
+.mb-boxed .mb-banner img{border-radius:.75rem}
+.mb-boxed .mb-tiles{padding:.625rem 0}
 /* ---------- Handy (bis 767px): kompakte Abstaende, Banner zuerst, Serien als Zeilen, Tabelle ohne Scrollen ---------- */
 @media (max-width:767.98px){
 .mb-sec{padding:2rem 0}
 .mb-sec--dark{padding:1rem 0 1.5rem}
 .mb-tiles{gap:.5rem;padding:.5rem}
 .mb-tile{border-radius:.5rem}
+.mb-boxed{padding-top:.5rem}
+.mb-boxed .mb-banner img{border-radius:.5rem}
+.mb-boxed .mb-tiles{padding:.5rem 0}
 .mb-kicker{font-size:.6875rem;margin-bottom:.375rem}
 .mb-h1{font-size:1.75rem;margin-bottom:.5rem}
 .mb-h2{font-size:1.375rem;margin-bottom:.5rem}
@@ -214,7 +222,10 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
 
     {if $mbBannerOn}
     {* ---------- BANNER: ein Bild ueber die volle Breite, komplett klickbar ---------- *}
+    {* Test: mit &mbboxed=1 in der URL stehen Banner und Kacheln in der Container-Breite *}
+    {$mbBoxed = isset($smarty.get.mbboxed)}
     <h1 class="sr-only">Megabar Pod-System mit bis zu 22.000 Zügen</h1>
+    {if $mbBoxed}<div class="mb-boxed"><div class="container">{/if}
     <div class="mb-banner">
         {if $mbBannerUrl}<a href="{$mbBannerUrl}">{/if}
         <picture>
@@ -233,6 +244,7 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
             {if $t.url}</a>{else}</div>{/if}
         {/foreach}
     </div>
+    {if $mbBoxed}</div></div>{/if}
     {else}
     {* ---------- HERO (bisherig, Rollback mit $mbBannerOn = 0) ---------- *}
     <section class="mb-sec mb-sec--dark">
