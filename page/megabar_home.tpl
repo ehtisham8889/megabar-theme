@@ -56,8 +56,10 @@
     ['Welche Nikotinstärke haben die Pods?', 'Die Megabar Pods in unserem Shop enthalten 20 mg/ml Nikotin.'],
     ['Wie schnell wird geliefert?', 'Die Lieferung erfolgt innerhalb von 1 bis 3 Werktagen mit DHL 18+. Ab 49 € ist der Versand innerhalb Deutschlands kostenlos.']
 ]}
+{* Test: mit ?mbboxed=1 in der URL stehen Banner und Kacheln in der Container-Breite, alle Abschnitte so breit wie der Header *}
+{$mbBoxed = isset($smarty.get.mbboxed)}
 
-<div class="mb-home">
+<div class="mb-home{if $mbBoxed} mb-home--boxed{/if}">
 {literal}<style>
 /* bisherige Startseite (OPC-Inhalt mit Klasse .mbl) ausblenden, solange die neue gezeigt wird */
 #main-wrapper .mbl{display:none!important}
@@ -155,6 +157,8 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
 .mb-boxed .mb-banner{background:none}
 .mb-boxed .mb-banner img{border-radius:.75rem}
 .mb-boxed .mb-tiles{padding:.625rem 0}
+/* Header (container-fluid-xl) ist max. 1650px breit, .container nur 1250px; wie bei smoke2u.de gleich breit machen */
+@media (min-width:992px){.mb-home--boxed .container{max-width:1650px}}
 /* ---------- Handy (bis 767px): kompakte Abstaende, Banner zuerst, Serien als Zeilen, Tabelle ohne Scrollen ---------- */
 @media (max-width:767.98px){
 .mb-sec{padding:2rem 0}
@@ -222,8 +226,6 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
 
     {if $mbBannerOn}
     {* ---------- BANNER: ein Bild ueber die volle Breite, komplett klickbar ---------- *}
-    {* Test: mit &mbboxed=1 in der URL stehen Banner und Kacheln in der Container-Breite *}
-    {$mbBoxed = isset($smarty.get.mbboxed)}
     <h1 class="sr-only">Megabar Pod-System mit bis zu 22.000 Zügen</h1>
     {if $mbBoxed}<div class="mb-boxed"><div class="container">{/if}
     <div class="mb-banner">
