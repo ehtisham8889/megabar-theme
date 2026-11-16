@@ -57,6 +57,11 @@
 		<meta itemprop="image" content="{$ShopLogoURL}" />
 		<meta property="og:image" content="{$ShopLogoURL}" />
 	{/if}
+
+	{* Megabar SEO: Organization + WebSite (mit Sitesuche) als JSON-LD, nur auf der Startseite *}
+	{if $nSeitenTyp === $smarty.const.PAGE_STARTSEITE}
+		<script type="application/ld+json">{ldelim}"@context":"https://schema.org","@graph":[{ldelim}"@type":"Organization","@id":{"{$ShopURL}/#organization"|json_encode},"name":"Megabar","legalName":"2U GmbH & Co. KG","url":{"{$ShopURL}/"|json_encode},"logo":{"{$ShopURL}/{$templateDir}themes/smoke2u/gfx/megabar-logo-footer.png"|json_encode},"email":"support@megabar.de","contactPoint":{ldelim}"@type":"ContactPoint","contactType":"customer support","email":"support@megabar.de","availableLanguage":"de"{rdelim}{rdelim},{ldelim}"@type":"WebSite","@id":{"{$ShopURL}/#website"|json_encode},"name":"Megabar","url":{"{$ShopURL}/"|json_encode},"inLanguage":"de-DE","publisher":{ldelim}"@id":{"{$ShopURL}/#organization"|json_encode}{rdelim},"potentialAction":{ldelim}"@type":"SearchAction","target":{ldelim}"@type":"EntryPoint","urlTemplate":{($ShopURL|cat:'/?qs={search_term_string}')|json_encode}{rdelim},"query-input":"required name=search_term_string"{rdelim}{rdelim}]{rdelim}</script>
+	{/if}
 {/block}
 
 {block name='layout-header-head-resources-preload'}
