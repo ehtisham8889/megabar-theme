@@ -96,9 +96,9 @@
                                 {* Megabar SEO: auf Desktop steht der sichtbare Titel (itemprop="name") innerhalb des Offer-Blocks und zaehlt so
                                    nicht fuer das Product. Name, Artikelnummer und Marke hier direkt am Product angeben. *}
                                 {if !($isMobile && !$isTablet)}
-                                    <meta itemprop="name" content="{$Artikel->cName|escape:'html'}">
-                                    {if !empty($Artikel->cArtNr)}<meta itemprop="sku" content="{$Artikel->cArtNr|escape:'html'}">{/if}
-                                    {if !empty($Artikel->cHersteller)}<div class="d-none" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="{$Artikel->cHersteller|escape:'html'}"></div>{/if}
+                                    <meta itemprop="name" content="{$Artikel->cName|escape:'html':'UTF-8':false}">
+                                    {if !empty($Artikel->cArtNr)}<meta itemprop="sku" content="{$Artikel->cArtNr|escape:'html':'UTF-8':false}">{/if}
+                                    {if !empty($Artikel->cHersteller)}<div class="d-none" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><meta itemprop="name" content="{$Artikel->cHersteller|escape:'html':'UTF-8':false}"></div>{/if}
                                 {/if}
                                 <div class="product-offer"{if !($Artikel->Preise->fVKNetto == 0 && $Einstellungen.global.global_preis0 === 'N')} itemprop="offers" itemscope itemtype="https://schema.org/Offer"{/if}>
                                     {block name='productdetails-details-info-hidden'}
