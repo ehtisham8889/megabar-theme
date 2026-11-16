@@ -229,7 +229,8 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
 
     {if $mbBannerOn}
     {* ---------- BANNER: ein Bild ueber die volle Breite, komplett klickbar ---------- *}
-    <h1 class="sr-only">Megabar Pod-System mit bis zu 22.000 Zügen</h1>
+    <h1 class="sr-only">Megabar Pod-System: Mega Auswahl. Mega Geschmack.</h1>
+    <h2 class="sr-only">Megabar Pod-System mit bis zu 22.000 Zügen</h2>
     {if $mbBoxed}<div class="mb-boxed"><div class="container">{/if}
     <div class="mb-banner">
         {if $mbBannerUrl}<a href="{$mbBannerUrl}">{/if}
