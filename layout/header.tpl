@@ -9,7 +9,7 @@
 	
 	{if $nSeitenTyp == 2 && $Suchergebnisse->getPages()->getCurrentPage() != 1} {* Ausnahme fuer paginierte Produktlisten *}
 		<meta name="robots" content="noindex">
-	{elseif $smarty.server.REQUEST_URI|strstr:"?" || $smarty.server.REQUEST_URI|strstr:"_" || $smarty.server.REQUEST_URI|strstr:"="  || $smarty.server.REQUEST_URI|strstr:"::"} {* Ausnahme fuer Parameter-URLs *}
+	{elseif $smarty.server.REQUEST_URI|strstr:"?" || $smarty.server.REQUEST_URI|strstr:"__" || $smarty.server.REQUEST_URI|strstr:"="  || $smarty.server.REQUEST_URI|strstr:"::"} {* Ausnahme fuer Parameter-URLs; "__" = Filter-URLs (vorher "_", traf auch /Pods_1 usw.) *}
 		<meta name="robots" content="noindex">
 	{else}
 		{$noindex = $bNoIndex === true  || (isset($Link) && $Link->getNoFollow() === true)}

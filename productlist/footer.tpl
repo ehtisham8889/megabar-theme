@@ -1,6 +1,4 @@
 {block name='productlist-footer' append}
-{if $boxesLeftActive}
-{else}
     <div id="dropper-cat-hook-after-content"></div>
 
     {if $Einstellungen.navigationsfilter.kategorie_beschreibung_anzeigen === 'Y'
@@ -8,9 +6,8 @@
         && $oNavigationsinfo->getCategory()->getDescription()|strlen > 0}
         {block name='productlist-footer-seo-description-category'}
             <div class="desc seo">
-                <p>{$oNavigationsinfo->getCategory()->getDescription()}</p>
+                {$oNavigationsinfo->getCategory()->getDescription()}
             </div>
         {/block}
     {/if}
-{/if}
 {/block}

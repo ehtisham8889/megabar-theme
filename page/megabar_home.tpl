@@ -27,7 +27,7 @@
 {$mbTiles = [
     ['img'=>'mb-tile-gt22000-20mg.webp',         'url'=>"{$ShopURL}/Pods",          'alt'=>'Megabar GT22000 Pods mit 20 mg Nikotin, 22 Sorten'],
     ['img'=>'mb-tile-megaliq-20mg.webp',         'url'=>'',                         'alt'=>'Megaliq Liquids mit 20 mg Nikotin, 15 Sorten'],
-    ['img'=>'mb-tile-gtmax-akku.webp',           'url'=>"{$ShopURL}/Akkutraeger_1", 'alt'=>'Megabar GT Max Akkuträger in 4 Farben'],
+    ['img'=>'mb-tile-gtmax-akku.webp',           'url'=>"{$ShopURL}/GT-Max-15000-Akkutraeger", 'alt'=>'Megabar GT Max Akkuträger in 4 Farben'],
     ['img'=>'mb-tile-gt22000plus-airflow.webp',  'url'=>'',                         'alt'=>'Megabar GT22000+ Airflow+ in 3 Farben']
 ]}
 
@@ -361,7 +361,7 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
             {if $mbPods|count > 6}<button type="button" class="btn btn-outline-primary mb-showmore" id="mb-showmore">Weitere Sorten anzeigen</button>{/if}
             <div class="mb-more">
                 <a class="btn btn-primary" href="{$ShopURL}/Pods">Alle GT 22000 Pods</a>
-                <a class="btn btn-outline-primary" href="{$ShopURL}/Pods_1">GT Max Pods</a>
+                <a class="btn btn-outline-primary" href="{$ShopURL}/GT-Max-15000-Pods">GT Max Pods</a>
                 <a class="btn btn-outline-primary" href="{$ShopURL}/Alle-Starter-Sets">Starter-Sets</a>
             </div>
             <p class="small text-muted-util mt-3 mb-0">* Alle Preise inkl. gesetzl. USt., zzgl. Versand.</p>
