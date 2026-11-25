@@ -25,7 +25,7 @@
 {$mbBannerAlt = 'Megabar GT Max Bundle: Akkuträger inklusive Pod jetzt für nur 9,99 €'}
 {* Kacheln unter dem Banner (je 600x417). url leer = Kachel nicht klickbar (z. B. solange es die Kategorie noch nicht gibt). *}
 {$mbTiles = [
-    ['img'=>'mb-tile-gt22000-20mg.webp',         'url'=>"{$ShopURL}/Pods",          'alt'=>'Megabar GT22000 Pods mit 20 mg Nikotin, 22 Sorten'],
+    ['img'=>'mb-tile-gt22000-20mg.webp',         'url'=>"{$ShopURL}/GT22000-Pods",          'alt'=>'Megabar GT22000 Pods mit 20 mg Nikotin, 22 Sorten'],
     ['img'=>'mb-tile-megaliq-20mg.webp',         'url'=>'',                         'alt'=>'Megaliq Liquids mit 20 mg Nikotin, 15 Sorten'],
     ['img'=>'mb-tile-gtmax-akku.webp',           'url'=>"{$ShopURL}/GT-Max-15000-Akkutraeger", 'alt'=>'Megabar GT Max Akkuträger in 4 Farben'],
     ['img'=>'mb-tile-gt22000plus-airflow.webp',  'url'=>'',                         'alt'=>'Megabar GT22000+ Airflow+ in 3 Farben']
@@ -42,7 +42,7 @@
 {get_product_list kKategorie=$mbCatGT22Pods nLimit=12 nSortierung=$smarty.const.SEARCH_SORT_BESTSELLER cAssign='mbPods'}
 
 {$mbSeries = [
-    ['name'=>'GT 22000',     'url'=>"{$ShopURL}/GT-22000",     'tag'=>'Meiste Sorten', 'img'=>"{$mbOpc}/megabar-gt-22000-akkutraeger-black.webp", 'alt'=>'Megabar GT 22000 Akkuträger in Schwarz', 'puffs'=>'bis 22.000', 'bat'=>'1400 mAh', 'pod'=>'10 ml', 'p1l'=>'Pods ab', 'p1'=>$mbMinGT22Pod,  'p2l'=>'Akkuträger ab', 'p2'=>$mbMinGT22Akku],
+    ['name'=>'GT 22000',     'url'=>"{$ShopURL}/GT22000",     'tag'=>'Meiste Sorten', 'img'=>"{$mbOpc}/megabar-gt-22000-akkutraeger-black.webp", 'alt'=>'Megabar GT 22000 Akkuträger in Schwarz', 'puffs'=>'bis 22.000', 'bat'=>'1400 mAh', 'pod'=>'10 ml', 'p1l'=>'Pods ab', 'p1'=>$mbMinGT22Pod,  'p2l'=>'Akkuträger ab', 'p2'=>$mbMinGT22Akku],
     ['name'=>'GT Max 15000', 'url'=>"{$ShopURL}/GT-Max-15000", 'tag'=>'Alu-Gehäuse',   'img'=>"{$mbHome}/mb-card-gtmax.webp",                'alt'=>'Megabar GT Max Akkuträger in Silver Gray','puffs'=>'bis 15.000', 'bat'=>'1400 mAh', 'pod'=>'10 ml', 'p1l'=>'Pods ab', 'p1'=>$mbMinGTMaxPod, 'p2l'=>'Akkuträger ab', 'p2'=>$mbMinGTMaxAkku]
 ]}
 
@@ -257,7 +257,7 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-lg-6 order-lg-2 mb-3 mb-lg-0 text-center">
-                    <a href="{$ShopURL}/GT-22000">
+                    <a href="{$ShopURL}/GT22000">
                         <img class="mb-hero__img" src="{$mbOpc}/megabar-22k-vape-20-sorten-angebot.webp" width="600" height="417" fetchpriority="high" decoding="async" alt="Megabar GT 22000 Pods und Akkuträger">
                     </a>
                 </div>
@@ -348,7 +348,7 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
                     <div class="mb-kicker">02 · Beliebte Sorten GT 22000</div>
                     <h2 class="mb-h2">Finde deine Sorte.</h2>
                 </div>
-                <a class="btn btn-outline-primary d-none d-md-inline-block" href="{$ShopURL}/Pods" style="border-radius:2rem">Alle GT 22000 Pods &rarr;</a>
+                <a class="btn btn-outline-primary d-none d-md-inline-block" href="{$ShopURL}/GT22000-Pods" style="border-radius:2rem">Alle GT 22000 Pods &rarr;</a>
             </div>
             <div class="mb-chips" id="mb-chips" role="group" aria-label="Sorten nach Geschmack filtern"></div>
             <div class="row product-list layout-gallery{if $mbPods|count > 6} mb-collapsed{/if}" id="product-list">
@@ -360,7 +360,7 @@ a.mb-tile:hover{box-shadow:0 .75rem 2rem rgba(0,0,0,.15);transform:translateY(-2
             </div>
             {if $mbPods|count > 6}<button type="button" class="btn btn-outline-primary mb-showmore" id="mb-showmore">Weitere Sorten anzeigen</button>{/if}
             <div class="mb-more">
-                <a class="btn btn-primary" href="{$ShopURL}/Pods">Alle GT 22000 Pods</a>
+                <a class="btn btn-primary" href="{$ShopURL}/GT22000-Pods">Alle GT 22000 Pods</a>
                 <a class="btn btn-outline-primary" href="{$ShopURL}/GT-Max-15000-Pods">GT Max Pods</a>
                 <a class="btn btn-outline-primary" href="{$ShopURL}/Alle-Starter-Sets">Starter-Sets</a>
             </div>
