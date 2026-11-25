@@ -1,19 +1,14 @@
 {block name='productdetails-image-actions'}
     {* moved to details *}
-
-    {*black friday
-    {if $Artikel->Preise->Sonderpreis_aktiv}
-        <div class="black-friday-badge position-absolute">
-            <img src="/bilder/custom_badge/smoke2u_black-friday_badge.png" alt="Black Friday Angebot für {$Artikel->cName}">
-        </div>
-    {/if}
-    black friday end*}
+    {* black friday badge moved to 'productdetails-image-images-wrapper' below, so it also shows on variation parents *}
 {/block}
 
 {* Megabar: danger skull. NOVA renders 'productdetails-image-actions' only for non-parent articles, so on
    variation parents the skull was missing. Prepending it to the next block in the same column keeps the
    exact same position for all products. *}
 {block name='productdetails-image-images-wrapper' prepend}
+    {* black friday badge, logic in snippets/mb_bf_badge.tpl *}
+    {include file='snippets/mb_bf_badge.tpl'}
     <div class="danger-symbol-array dangersym_smoke2u position-absolute">
     {* Megabar: Pods, Starter-Sets, Nikotinsalz *}
         {$showDanger = false}

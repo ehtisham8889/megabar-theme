@@ -13,7 +13,7 @@
 .black-friday-badge {
     z-index:13;
     width:100px;
-    top:-10px;
+    top:0; /* was -10px: the image box clips overflow, so the top of the badge was cut off (mainly on mobile) */
     left:0;
     height:100px;
 }
@@ -28,8 +28,10 @@
 .black-friday-badge img {
     width:100%;
 }
-.black-friday-badge + .ribbon,
-.black-friday-badge + div + .ribbon {
+/* Megabar: where the badge shows, it replaces all ribbons (sale %, nicotine strength ...).
+   Out-of-stock and pre-order products get no badge (snippets/mb_bf_badge.tpl), so their
+   "Ausverkauft" / "Vorbestellbar" ribbons still show. */
+.black-friday-badge ~ .productbox-ribbon.ribbon {
     display:none;
 }
 
@@ -649,4 +651,11 @@ a.badge-primary:focus {
    Farbe/Sorte selects on hover and the WEEE bin and danger skull sit on top of them. Keep them hidden in lists. */
 .product-list .productbox-show-variations .productbox-variations {
   display: none !important;
+}
+
+/* Megabar: "Filter und Sortierung" bar on mobile category lists scrolls away with the page instead of sticking under the header. */
+@media (max-width: 991.98px) {
+  .filter-cat {
+    position: static;
+  }
 }

@@ -134,39 +134,7 @@
                                                                 <h1 class="mb-0 pb-0 product-title h2 font-weight-bold" itemprop="name">{$Artikel->cName}</h1>
                                                             {/block}
 
-                                                            {block name='productdetails-details-info-manufacturer-wrapper'}
-                                                                {if !empty($Artikel->cHersteller)}
-                                                                    {block name='productdetails-details-product-info-manufacturer'}
-                                                                        <div class="col-auto manufacturer-image ml-auto" itemprop="brand" itemscope itemtype="https://schema.org/Brand">
-                                                                            {if $Einstellungen.artikeldetails.artikel_weitere_artikel_hersteller_anzeigen === 'Y'}
-                                                                                <a href="{$Artikel->cHerstellerURL|replace:"smoke2u.de":"smoke2u.de/top-marken"|replace:"_1":""|replace:"_2":""}"
-                                                                                    {if $Einstellungen.artikeldetails.artikeldetails_hersteller_anzeigen === 'B'}
-                                                                                        data-toggle="tooltip"
-                                                                                        data-placement="left"
-                                                                                        title="{$Artikel->cHersteller}" 
-                                                                                    {/if}
-                                                                                itemprop="url">
-                                                                            {/if}
-                                                                                {if ($Einstellungen.artikeldetails.artikeldetails_hersteller_anzeigen === 'B'
-                                                                                    || $Einstellungen.artikeldetails.artikeldetails_hersteller_anzeigen === 'BT')
-                                                                                    && !empty($Artikel->cHerstellerBildURLKlein)}
-                                                                                    {image lazy=true
-                                                                                        webp=true
-                                                                                        src=$Artikel->cHerstellerBildURLKlein
-                                                                                        alt=$Artikel->cHersteller|escape:'html'
-                                                                                    }
-                                                                                    <meta itemprop="image" content="{$Artikel->cHerstellerBildURLKlein}">
-                                                                                {/if}
-                                                                                {if $Einstellungen.artikeldetails.artikeldetails_hersteller_anzeigen !== 'B'}
-                                                                                    <span itemprop="name">{$Artikel->cHersteller}</span>
-                                                                                {/if}
-                                                                            {if $Einstellungen.artikeldetails.artikel_weitere_artikel_hersteller_anzeigen === 'Y'}
-                                                                                </a>
-                                                                            {/if}
-                                                                        </div>
-                                                                    {/block}
-                                                                {/if}
-                                                            {/block}  
+                                                            {* Megabar: sichtbarer Hersteller-Link entfernt, Marke steht als Schema-Meta oben *}
                                                            
                                                         </div>
                                                     

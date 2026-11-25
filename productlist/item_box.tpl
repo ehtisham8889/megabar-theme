@@ -1,12 +1,7 @@
-{*block name='productlist-item-box-image' prepend} auskommentiert black friday
-    
-    {if $Artikel->Preise->Sonderpreis_aktiv}
-        <div class="black-friday-badge position-absolute">
-            <img src="/bilder/custom_badge/smoke2u_black-friday_badge.png" alt="Black Friday Angebot für {$Artikel->cName}">
-        </div>
-    {/if}
-
-{/block*}
+{* black friday badge, logic in snippets/mb_bf_badge.tpl *}
+{block name='productlist-item-box-image' prepend}
+    {include file='snippets/mb_bf_badge.tpl'}
+{/block}
 {if $Artikel->nErscheinendesProdukt || $Artikel->fLagerbestand == 0}
     {block name='productlist-item-box-include-productlist-actions'}
     {/block}
@@ -17,7 +12,14 @@
     {/link}
 {/block}
 
-{block name='productlist-index-include-price' append}
+{* replaces the NOVA block (not append) so availability can sit inside the Offer div;
+   the Offer markup below is copied from NOVA productlist/item_box.tpl *}
+{block name='productlist-index-include-price'}
+    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <link itemprop="businessFunction" href="http://purl.org/goodrelations/v1#Sell" />
+        {include file='snippets/mb_schema_availability.tpl'}
+        {include file='productdetails/price.tpl' Artikel=$Artikel tplscope=$tplscope}
+    </div>
     {block name='productlist-item-list-basket-details'}
         {if !$isOPC}
         <div class="added-to-cart-notice" data-lang="{lang key="pushedToCartItem" section="custom"}"></div>
